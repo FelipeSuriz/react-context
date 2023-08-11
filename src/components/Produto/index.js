@@ -5,7 +5,6 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import { useCarrinhoContext } from 'common/context/Carrinho';
 
-
 function Produto({
   nome,
   foto,
@@ -29,6 +28,7 @@ function Produto({
       </div>
       <div>
         <IconButton
+          disabled={!produtoNoCarrinho}
           onClick={() => removerProduto(id)}
           color="secondary"
         >
